@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -72,11 +72,14 @@ function LoginPage() {
           </button>
         </form>
 
-        <p className='text-center text-sm text-gray-600 mt-4'>
+        <p className='mt-4 text-sm text-center text-gray-600'>
           Don't have an account?{" "}
-          <a href='/signup' className='text-blue-600 hover:underline font-medium'>
-            Sign up here
-          </a>
+          <span
+            className='text-blue-600 hover:underline cursor-pointer'
+            onClick={() => navigate("/signup")}
+          >
+            Sign Up
+          </span>
         </p>
       </div>
     </div>
