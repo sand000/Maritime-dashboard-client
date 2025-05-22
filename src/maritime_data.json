@@ -1,0 +1,182 @@
+[
+  {
+    "id": "1",
+    "name": "Great Barrier Reef",
+    "type": "Coral Reef",
+    "location": "Australia",
+    "depth": "0-30m",
+    "temperature": "24-30°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "2",
+    "name": "Mariana Trench",
+    "type": "Deep Ocean Trench",
+    "location": "Western Pacific Ocean",
+    "depth": "10,994m",
+    "temperature": "1-4°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "3",
+    "name": "Sargasso Sea",
+    "type": "Open Ocean",
+    "location": "North Atlantic Ocean",
+    "depth": "5000m",
+    "temperature": "18-28°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "4",
+    "name": "Galápagos Islands",
+    "type": "Marine Reserve",
+    "location": "Ecuador",
+    "depth": "0-100m",
+    "temperature": "22-26°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "5",
+    "name": "Red Sea Coral",
+    "type": "Coral Reef",
+    "location": "Egypt",
+    "depth": "5-40m",
+    "temperature": "26-30°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "6",
+    "name": "Baltic Sea",
+    "type": "Brackish Sea",
+    "location": "Northern Europe",
+    "depth": "55m",
+    "temperature": "0-15°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "7",
+    "name": "Monterey Canyon",
+    "type": "Submarine Canyon",
+    "location": "California, USA",
+    "depth": "3,600m",
+    "temperature": "2-10°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "8",
+    "name": "Andaman Sea",
+    "type": "Marginal Sea",
+    "location": "Southeast Asia",
+    "depth": "1,300m",
+    "temperature": "26-29°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "9",
+    "name": "Dead Sea",
+    "type": "Salt Lake",
+    "location": "Israel/Jordan",
+    "depth": "304m",
+    "temperature": "20-40°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "10",
+    "name": "Lake Baikal",
+    "type": "Freshwater Lake",
+    "location": "Russia",
+    "depth": "1,642m",
+    "temperature": "0-10°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "11",
+    "name": "Bermuda Triangle",
+    "type": "Open Ocean",
+    "location": "Atlantic Ocean",
+    "depth": "9,000m",
+    "temperature": "20-28°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "12",
+    "name": "Amazon River Estuary",
+    "type": "River Mouth",
+    "location": "Brazil",
+    "depth": "20-40m",
+    "temperature": "25-30°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "13",
+    "name": "Falkland Islands Waters",
+    "type": "Marine Ecosystem",
+    "location": "South Atlantic",
+    "depth": "200-400m",
+    "temperature": "8-14°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "14",
+    "name": "Gulf of Mexico",
+    "type": "Gulf",
+    "location": "North America",
+    "depth": "1,615m",
+    "temperature": "15-30°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "15",
+    "name": "Arctic Ocean",
+    "type": "Polar Ocean",
+    "location": "North Pole",
+    "depth": "1,038-5,450m",
+    "temperature": "-2 to 5°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "16",
+    "name": "Bering Sea",
+    "type": "Marginal Sea",
+    "location": "Between Russia & Alaska",
+    "depth": "1,500m",
+    "temperature": "-1 to 12°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "17",
+    "name": "Barents Sea",
+    "type": "Marginal Sea",
+    "location": "Arctic Ocean",
+    "depth": "230m",
+    "temperature": "-1 to 5°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "18",
+    "name": "Caspian Sea",
+    "type": "Saltwater Lake",
+    "location": "Central Asia",
+    "depth": "1,025m",
+    "temperature": "5-28°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "19",
+    "name": "North Sea",
+    "type": "Continental Shelf Sea",
+    "location": "Europe",
+    "depth": "95m",
+    "temperature": "6-17°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": "20",
+    "name": "South China Sea",
+    "type": "Marginal Sea",
+    "location": "Asia",
+    "depth": "1,650m",
+    "temperature": "18-30°C",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  }
+]
