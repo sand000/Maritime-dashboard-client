@@ -36,8 +36,6 @@ function LoginPage() {
         localStorage.setItem("user-details", JSON.stringify(user));
         localStorage.setItem("token", token);
 
-        console.log("login user ", user);
-
         alert(`Welcome back ${user.name}!`);
         navigate("/dashboard");
       } else {

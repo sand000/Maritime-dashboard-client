@@ -12,6 +12,7 @@ function SignupPage() {
     password: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
   const handleFormChange = (e) => {
@@ -24,26 +25,31 @@ function SignupPage() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return; // prevent double submit
+    setIsSubmitting(true);
+
     try {
       const response = await axios.post(`${BASE_URL}/auth/registerUser`, formData);
-      console.log("Signup response:", response.data);
+      const { message, user } = response.data;
 
-      if (response.data?.success) {
-        alert(response.data.message || "User registered successfully!");
-        navigate("/"); 
-        setFormData({ name: "", age: "", email: "", password: "" }); 
+      // Your backend returns 201 + user on success
+      if (response.status === 201) {
+        alert("User created successfully! Please login.");
+        navigate("/");
       } else if (
-        response.data?.message?.toLowerCase().includes("user already exists") ||
-        response.data?.message?.toLowerCase().includes("email already exists")
+        message?.toLowerCase().includes("user already exists") ||
+        message?.toLowerCase().includes("email already exists")
       ) {
-        alert("User already exists. Redirecting to login page.");
-        navigate("/"); 
+        alert(message);
+        navigate("/"); // redirect to login even if user exists
       } else {
-        alert(response.data?.message || "User registration failed");
+        alert(message || "Registration failed.");
       }
     } catch (error) {
       console.error("SignUp error:", error);
-      alert(error?.response?.data?.message || "Error creating user");
+      alert(error?.response?.data?.message || "Server error during registration.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -92,9 +98,10 @@ function SignupPage() {
 
           <button
             type='submit'
+            disabled={isSubmitting}
             className='mt-2 !bg-blue-600 text-white py-2 rounded-lg hover:!bg-blue-700 transition duration-300 font-semibold shadow-md'
           >
-            Sign Up
+            {isSubmitting ? "Registering..." : "Sign Up"}
           </button>
         </form>
 
