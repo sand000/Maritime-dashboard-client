@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -25,18 +25,27 @@ function LoginPage() {
 
     try {
       const response = await axios.post(`${BASE_URL}/auth/login`, formData);
-      if (response.data?.data.token) {
-        // Store token in localStorage
-        localStorage.setItem("token", response.data.data.token);
 
-        alert(`Welcome back ${response.data.data.user.name}!`);
+      const { token, user } = response.data?.data || {};
+      if (token && user) {
+        // Clear previous data
+        localStorage.removeItem("user-details");
+        localStorage.removeItem("token");
+
+        // Save new login info
+        localStorage.setItem("user-details", JSON.stringify(user));
+        localStorage.setItem("token", token);
+
+        console.log("login user ", user);
+
+        alert(`Welcome back ${user.name}!`);
         navigate("/dashboard");
       } else {
         alert("Invalid credentials");
       }
     } catch (error) {
       console.error("Login error:", error);
-      alert("No user found or login failed");
+      alert(error?.response?.data?.message || "No user found or login failed");
     }
   };
 

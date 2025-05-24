@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -26,15 +26,24 @@ function SignupPage() {
     e.preventDefault();
     try {
       const response = await axios.post(`${BASE_URL}/auth/registerUser`, formData);
-      if (response.data) {
-        alert("User created successfully");
-        navigate("/");
+      console.log("Signup response:", response.data);
+
+      if (response.data?.success) {
+        alert(response.data.message || "User registered successfully!");
+        navigate("/"); 
+        setFormData({ name: "", age: "", email: "", password: "" }); 
+      } else if (
+        response.data?.message?.toLowerCase().includes("user already exists") ||
+        response.data?.message?.toLowerCase().includes("email already exists")
+      ) {
+        alert("User already exists. Redirecting to login page.");
+        navigate("/"); 
       } else {
-        alert("User registration failed");
+        alert(response.data?.message || "User registration failed");
       }
     } catch (error) {
       console.error("SignUp error:", error);
-      alert("Error creating user");
+      alert(error?.response?.data?.message || "Error creating user");
     }
   };
 
