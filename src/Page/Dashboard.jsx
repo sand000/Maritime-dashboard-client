@@ -109,7 +109,7 @@ const Dashboard = () => {
           </div>
         </div>
       </nav>
-      
+
       {/* Main Content */}
       <div className='flex items-center justify-center px-4'>
         <div className='w-full max-w-6xl mt-10'>
@@ -134,13 +134,13 @@ const Dashboard = () => {
                     <span className='font-semibold'>Type:</span> {ship.type}
                   </p>
                   <p className='text-gray-700'>
-                    <span className='font-semibold'>Location:</span> {ship.location}
+                    <span className='font-semibold'>Location:</span> {ship.origin}
                   </p>
                   <p className='text-gray-700'>
-                    <span className='font-semibold'>Depth:</span> {ship.depth}
+                    <span className='font-semibold'>Depth:</span> {ship.tonnage}
                   </p>
                   <p className='text-gray-700'>
-                    <span className='font-semibold'>Temperature:</span> {ship.temperature}
+                    <span className='font-semibold'>Range:</span> {ship.range}
                   </p>
                 </div>
               </div>
